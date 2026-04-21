@@ -1,0 +1,42 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.header {
+  text-align: center;
+  padding: 60px;
+  background: #2563EB;
+  color: white;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+code {
+  background: #1e293b;
+  padding: 10px;
+  display: block;
+  border-radius: 6px;
+}
+
+pre {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+}

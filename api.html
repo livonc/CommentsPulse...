@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CommentsPulse API</title>
+  <link rel="stylesheet" href="api.css">
+</head>
+<body>
+
+<header class="header">
+  <h1 class="logo">Comments<span>Pulse</span> API</h1>
+  <p>Turn comments into insights and content ideas</p>
+</header>
+
+<section class="container">
+
+  <h2>Base URL</h2>
+  <code>https://api.commentspulse.com/v1</code>
+
+  <h2>Analyze Comments</h2>
+  <p><strong>POST</strong> /analyze</p>
+
+  <pre>
+{
+  "comments": [
+    "How do I grow on TikTok?",
+    "How to go viral?"
+  ]
+}
+  </pre>
+
+  <h3>Response</h3>
+  <pre>
+{
+  "trends": ["TikTok growth"],
+  "ideas": ["How to Grow on TikTok Fast"]
+}
+  </pre>
+
+  <h2>Generate Ideas</h2>
+  <p><strong>POST</strong> /generate</p>
+
+  <pre>
+{
+  "topic": "TikTok growth"
+}
+  </pre>
+
+</section>
+
+</body>
+</html>

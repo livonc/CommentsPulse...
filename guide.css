@@ -1,0 +1,36 @@
+* { margin: 0; 
+    padding: 0;
+     box-sizing: border-box;
+     font-family: 'poppins', sans-serif;
+    }
+    
+body {
+  line-height: 1.6;
+}
+
+.header { 
+ background: linear-gradient(to right, #1E3A8A,  #1E3A8A);
+  color: white;
+  padding: 50px;
+  text-align: center;
+}
+
+.content {
+  background: #fafafc;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 10px;
+  padding: 40px 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+.logo span{
+  color: #93c5fd;
+}

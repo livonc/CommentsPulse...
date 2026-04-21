@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Comments Pulse</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Comments<span>Pulse</span></div>
+  </header>
+
+  <div class="container">
+    <h1>Get in Touch</h1>
+    <p class="subtitle">We're here to help you turn audience comments into powerful content ideas</p>
+
+    <div class="contact-grid">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        
+        <div class="contact-item">
+          <div>📧</div>
+          <div>
+            <h3>Email</h3>
+            <p>commentspulse@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div>💬</div>
+          <div>
+            <h3>WhatsApp</h3>
+            <p>+234 708 711 8965</p>
+            <a href="https://wa.me/2347087118965" target="_blank" class="whatsapp-btn">
+              💬 Chat with us on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div>⏰</div>
+          <div>
+            <h3>Response Time</h3>
+            <p>We usually reply within 2-4 hours during business days</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="form-card">
+        <h2>Send us a Message</h2>
+        <form id="contactForm">
+          <input type="text" placeholder="Your Full Name" required>
+          <input type="email" placeholder="Your Email Address" required>
+          <input type="text" placeholder="Subject" required>
+          <textarea rows="6" placeholder="How can we help you today? (e.g. feature request, support, partnership)" required></textarea>
+          
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Comments Pulse. All rights reserved.<br>
+   Port Harcourt, Rivers State, Nigeria
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("✅ Thank you! Your message has been sent. We'll reply soon.");
+      this.reset();
+    });
+  </script>
+</body>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in - Comments Pulse</title>
+  <link rel="stylesheet" href="login2.html">
+  <link rel="stylesheet" href="login2.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="left-side">
+      <div class="logo"><img src="pulse images/icons8-pulse-50.png" alt="CommentsPulse logo">Comments<span>Pulse</span> </div>
+      <h1>Welcome back</h1>
+      <p>Access your audience insights and turn comments into your next content idea instantly.</p>
+    </div>
+
+    <div class="right-side">
+      <div class="form-card">
+        <img src="pulse images/icons8-pulse-50.png" alt="CommentsPulse logo">
+        <h2>Log in to Comments Pulse</h2>
+        <p>Enter your details to continue</p>
+        
+        <form id="loginForm">
+          <input type="email" id="email" placeholder="Email address" required>
+          <div id="emailError" class="error">Please enter a valid email address</div>
+
+          <div class="input-group">
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="button" class="toggle-password" id="toggleLogin">🔒</button>
+          </div>
+
+          <div class="forgot">
+            <a href="#">Forgot password?</a>
+          </div>
+
+          <button type="submit" id="loginBtn" class="btn">
+            <span id="loginText">Log In</span>
+            <span id="loginSpinner" style="display:none;">⏳</span>
+          </button>
+        </form>
+
+        <div style="text-align: center; margin-top: 25px; font-size: 17px;">
+          Don't have an account? <a href="signup.html" style="color: var(--light-blue);">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const toggleLogin = document.getElementById('toggleLogin');
+    const passwordInput = document.getElementById('password');
+
+    toggleLogin.addEventListener('click', () => {
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleLogin.textContent = '🔓';   // Unlocked = visible
+      } else {
+        passwordInput.type = 'password';
+        toggleLogin.textContent = '🔒';   // Locked = hidden
+      }
+    });
+  </script>
+</body>
+</html>

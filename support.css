@@ -1,0 +1,202 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+/* LIGHT THEME (DEFAULT) */
+:root {
+  --bg: #EFF6FF;
+  --card: #ffffff;
+  --text: #111827;
+  --subtext: #6B7280;
+  --primary: #2563EB;
+  --header: linear-gradient(135deg, #1E3A8A, #2563EB);
+}
+
+/* DARK THEME */
+body.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --subtext: #94a3b8;
+  --primary: #3b82f6;
+  --header: linear-gradient(135deg, #020617, #1e3a8a);
+}
+
+/* BODY */
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* HEADER */
+.header {
+  background: var(--header);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.logo span{
+  color: #93c5fd;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: white;
+}
+
+/* SEARCH */
+.search-section {
+  margin: 30px 10px;
+  text-align: center;
+}
+
+.search-box {
+  position: relative;
+  max-width: 520px;
+  margin: auto;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 14px 15px 14px 45px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 15px;
+  background: var(--card);
+  color: var(--text);
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  fill: var(--subtext);
+}
+
+/* SUPPORT OPTIONS */
+.support-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.option {
+  background: var(--card);
+  padding: 25px;
+  width: 260px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.option:hover {
+  transform: translateY(-6px);
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+  fill: var(--primary);
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.option p {
+  color: var(--subtext);
+}
+
+/* LINKS */
+.option a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* CONTACT */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: var(--card);
+  color: var(--text);
+}
+
+.contact button {
+  background: var(--primary);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* FAQ */
+.faq {
+  max-width: 800px;
+  margin: 10px;
+  padding: 50px 20px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #1E3A8A;
+  color: white;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .support-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .option {
+    width: 90%;
+  }
+}

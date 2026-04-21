@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  color: #111827;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  padding: 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo span {
+  color: #93c5fd;
+}
+
+.back {
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.hero p {
+  margin-top: 15px;
+  color: #dbeafe;
+}
+
+/* WHY */
+.why {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.why-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.card:hover{
+  transform: translateY(-7px);
+}
+
+/* JOBS */
+.jobs {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.job-card {
+  background: white;
+  margin: 15px auto;
+  padding: 20px;
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.job-card:hover{
+  transform: translateY(-7px);
+}
+
+.job-card button {
+  margin-top: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.job-card button:hover{
+  transform: scale(1.7px);
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #fff;
+  
+}
+
+/* CTA */
+.cta {
+  background: #eff6ff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.cta button {
+  margin-top: 15px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.cta button:hover{
+  transform: scale(1.4px);
+    background: linear-gradient(to right, #1e3c72, #2a5298); 
+    color: #fff;
+}
+
+/* FOOTER */
+.footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .why-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

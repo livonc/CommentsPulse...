@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Comments Pulse</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left-side">
+      <div class="logo"><img src="pulse images/icons8-pulse-50.png" alt="CommentsPulse logo"> Comments<span>Pulse</span></div>
+      <h1>Get started free</h1>
+      <p>Analyze comments, discover trends, and generate content ideas in seconds.</p>
+    </div>
+
+    <!-- Right Side - Sign Up Form -->
+    <div class="right-side">
+      <div class="form-card">
+        <img src="pulse images/icons8-pulse-50.png" alt="CommentsPulse logo">
+        <h2>Create your free account</h2>
+        <p>No credit card required • 14-day trial included</p>
+        
+        <form id="signupForm">
+          <input type="text" id="name" placeholder="Full name" required>
+          
+          <input type="email" id="email" placeholder="Email address" required>
+          <div id="emailError" class="error">Please enter a valid email address</div>
+
+          <div class="input-group">
+            <input type="password" id="password" placeholder="Create password" required>
+            <button type="button" class="toggle-password" id="togglePassword">
+              🔒</button>
+          </div>
+
+          <div class="input-group">
+            <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+            <button type="button" class="toggle-password" id="toggleConfirm">
+              🔒</button>
+          </div>
+          <div id="passwordError" class="error">Passwords do not match</div>
+
+          <!-- Terms Checkbox -->
+          <div class="terms">
+            <label>
+              <input type="checkbox" id="agreeTerms" required style="margin-right: 8px;">
+              By signing up, you agree to our 
+              <a href="terms.html" target="_blank">Terms of Service</a> and 
+              <a href="privacy.html" target="_blank">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button type="submit" id="signupBtn" class="btn">
+            <span id="signupText">Create Account</span>
+            <span id="signupSpinner" style="display:none;">⏳</span>
+          </button>
+        </form>
+
+        <div class="link">
+          Already have an account? <a href="login2.html" > Log in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const signupForm = document.getElementById('signupForm');
+    const signupBtn = document.getElementById('signupBtn');
+    const signupText = document.getElementById('signupText');
+    const signupSpinner = document.getElementById('signupSpinner');
+
+    const togglePassword = document.getElementById('togglePassword');
+    const toggleConfirm = document.getElementById('toggleConfirm');
+    const passwordField = document.getElementById('password');
+    const confirmField = document.getElementById('confirmPassword');
+    const agreeTerms = document.getElementById('agreeTerms');
+
+    // Password toggles
+    togglePassword.addEventListener('click', () => {
+      if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        togglePassword.textContent = '👁️';
+      } else {
+        passwordField.type = 'password';
+        togglePassword.textContent = '🔒';
+      }
+    });
+
+    toggleConfirm.addEventListener('click', () => {
+      if (confirmField.type === 'password') {
+        confirmField.type = 'text';
+        toggleConfirm.textContent = '👁️';
+      } else {
+        confirmField.type = 'password';
+        toggleConfirm.textContent = '🔒';
+      }
+    });
+
+    // Form validation and submission
+    signupForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      if (!agreeTerms.checked) {
+        alert("Please agree to the Terms of Service and Privacy Policy to continue.");
+        return;
+      }
+
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const confirm = document.getElementById('confirmPassword').value;
+
+      const emailError = document.getElementById('emailError');
+      const passwordError = document.getElementById('passwordError');
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      let isValid = true;
+
+      if (!emailRegex.test(email)) {
+        emailError.style.display = 'block';
+        isValid = false;
+      } else {
+        emailError.style.display = 'none';
+      }
+
+      if (password !== confirm) {
+        passwordError.style.display = 'block';
+        isValid = false;
+      } else {
+        passwordError.style.display = 'none';
+      }
+
+      if (!isValid) return;
+
+      // Show loading
+      signupBtn.disabled = true;
+      signupText.style.display = 'none';
+      signupSpinner.style.display = 'inline';
+
+      setTimeout(() => {
+        alert("✅ Account created successfully! Welcome to Comments Pulse.");
+        signupBtn.disabled = false;
+        signupText.style.display = 'inline';
+        signupSpinner.style.display = 'none';
+        // In real app: window.location.href = "dashboard.html";
+      }, 1800);
+    });
+  </script>
+</body>
+</html>
